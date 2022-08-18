@@ -1,0 +1,84 @@
+*,
+*::before,
+*::after{
+	box-sizing: border-box;
+}
+
+html{
+	font-size: 62.5%; // 10px
+}
+
+body{
+	-webkit-font-smoothing: antialiased;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+	font-size: 1.6rem; // 16px
+	margin: 0;
+
+	min-width: 320px;
+	overflow-x: hidden;
+
+	position: relative;
+}
+
+h1, h2, h3, h4, h5, h6, p{
+	margin: 0;
+}
+
+a{
+  color: inherit;
+  text-decoration: none;
+  font: inherit;
+  &:focus{
+    outline: none;
+  }
+	&:visited,
+	&:hover,
+	&:active{
+    text-decoration: none;
+  }
+}
+
+button{
+	font: inherit;
+	color: inherit;
+	padding: 0;
+	border: none;
+	cursor: pointer;
+	background: none;
+	outline: none;
+	&:focus{
+		outline: none;
+	}
+}
+
+input, select, textarea{
+	color: inherit;
+	font: inherit;
+	outline: none;
+	&:focus{
+		outline: none;
+	}
+  &::placeholder{
+    font: inherit;
+    color: inherit;
+  }
+}
+
+ul{
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+.container{
+	width: 100%;
+	max-width: 1430px;
+  padding: 0 15px;
+	margin: 0 auto;
+}
+
+.check{
+	color: #ff0036;
+	font-weight: 700;
+	display: grid;
+}
