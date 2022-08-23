@@ -39,35 +39,77 @@
 
 	<!--Header-->
 	<header class="header">
-		<div class="container">
-			<div class="header__inner">
+		<div class="header__inner">
+			<div class="container">
 				<div class="header__intro">
-					<a class="header__link" href="#">
+					<a class="header__logo" href="#">
 						<picture>
 							<source srcset="images/logo-mobile.png 1x, images/logo-mobile@2x.png 2x" media="(max-width: 768px)">
-							<img class="header__link-logo" src="images/logo-desktop.png" srcset="images/logo-desktop@2x.png 2x" alt="logo">
+							<img class="header__logo-icon" src="images/logo-desktop.png" srcset="images/logo-desktop@2x.png 2x" alt="logo">
 						</picture>
 					</a>
-					<form action="" class="header__form">
-						<input class="header__form-search" type="search">
-						<button class="header__form-shop" type="button">Купить уроки</button>
+					<form class="header__form">
+						<div class="header__search">
+							<input class="header__search-input" id="mainSearch" type="search" placeholder="Search">
+							<label class="header__search-label" for="mainSearch">
+								<img class="header__search-icon" src="images/icon-search.png" alt="icon-search">
+							</label>
+						</div>
+						<button class="header__button" type="button">Купить уроки</button>
 					</form>
-					<a class="header__link" href="#">
-						<svg class="header__link-ring">
-							<use xlink:href="#ring"></use>
-						</svg>
-					</a>
-					<a class="header__link" href="#">
-						<svg class="header__link-profile">
-							<use xlink:href="#person"></use>
-						</svg>
-					</a>
-				</div> <!-- /.header__intro -->
-				<nav class="header__nav">
-
-				</nav>
-			</div> <!-- /.header__inner -->
-		</div> <!-- /.container -->
+					<div class="header__profile">
+						<a class="header__link" href="#">
+							<svg class="header__link-ring">
+								<use xlink:href="#ring"></use>
+							</svg>
+						</a>
+						<a class="header__link" href="#">
+							<svg class="header__link-user">
+								<use xlink:href="#person"></use>
+							</svg>
+						</a>
+					</div>
+				</div><!-- /.header__intro -->
+			</div><!-- /.container -->
+			<nav class="header__menu">
+				<div class="container">
+					<ul class="header__list">
+						<li class="header__list-item">
+							<button class="header__list-link" id="headerButton" type="button">
+								<span>Уроки</span>
+								<svg class="header__list-arrow" viewBox="0 0 20 10">
+									<path d="M10 9L2 1H18L10 9Z"></path>
+								</svg>
+							</button>
+							<ul class="header__list-submenu">
+								<li>
+									<a class="header__list-link" href="#">Мои уроки</a>
+								</li>
+								<hr>
+								<li>
+									<a class="header__list-link" href="#">Домашнее задание</a>
+								</li>
+							</ul>
+						</li>
+						<li class="header__list-item">
+							<a class="header__list-link" href="#">Курсы</a>
+						</li>
+						<li class="header__list-item">
+							<a class="header__list-link" href="#">Телеканалы</a>
+						</li>
+						<li class="header__list-item">
+							<a class="header__list-link" href="#">Видео</a>
+						</li>
+						<li class="header__list-item">
+							<a class="header__list-link" href="#">Книги</a>
+						</li>
+						<li class="header__list-item">
+							<a class="header__list-link" href="#">Радио</a>
+						</li>
+					</ul>
+				</div><!-- /.container -->
+			</nav>
+		</div> <!-- /.header__inner -->
 	</header>
 
 	<script src="script/main.js"></script>

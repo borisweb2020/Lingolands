@@ -1,15 +1,164 @@
 .header{
-  &__link-ring{
-    fill: $black;
-    width: 36px;
-    height: 35px;
+  background-color: $main-blue;
+
+  &__intro{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 57px;
   }
 
-  &__link-profile{
-    fill: $black;
+  &__logo{
+    display: inline-block;
+    width: 225px;
+    height: 54px;
+  }
+
+  &__logo-icon{
+    width: 100%;
+    height: auto;
+  }
+
+  &__form{
+    display: flex;
+    flex-wrap: nowrap;
+  }
+
+  &__search{
+    position: relative;
+    width: 387px;
+    height: 39px;
+
+    margin-right: 49px;
+  }
+
+  &__search-input{
+    width: 100%;
+    height: 100%;
+    padding: 0 0 0 49px;
+  }
+
+  &__search-label{
+    display: inline-block;
+    width: 23px;
+    height: 23px;
+    cursor: pointer;
+
+    position: absolute;
+    top: 50%;
+    left: 16px;
+    transform: translateY(-50%);
+  }
+
+  &__search-icon{
+    width: 100%;
+    height: auto;
+  }
+
+  &__button{
+    @include button(8px 6px);
+    @include font('Montserrat-Medium', 20px, 500, $white);
+  }
+
+  &__link{
+    display: inline-block;
     width: 40px;
     height: 40px;
-    // stroke: $black;
-    // stroke-width: 1px;
+    transition: opacity .2s linear;
+  }
+
+  &__link:last-child{
+    margin-left: 53px;
+  }
+
+  &__link:hover{
+    opacity: .5;
+  }
+
+  &__link-ring{
+    fill: $white;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__link-user{
+    fill: $white;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__menu{
+    border-top: 1px solid rgba(255, 255, 255, .6);
+  }
+
+  &__list{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__list-item{
+    position: relative;
+    display: block;
+    padding: 6px 0 9px 0;
+  }
+
+  &__list-link{
+    @include font('Montserrat-Medium', 19px, 500, $white);
+    transition: opacity .2s ease-in-out;
+    white-space: nowrap;
+  }
+
+  &__list-arrow{
+    width: 20px;
+    height: 10px;
+    fill: $white;
+  }
+
+  &__list-arrow.rotate{
+    transform: rotate(180deg);
+  }
+
+  &__list-link:hover,
+  &__list-link:focus{
+    opacity: .4;
+  }
+
+  &__list-link[type=button]:hover,
+  &__list-link[type=button]:focus{
+    opacity: 1;
+  }
+
+  &__list-submenu{
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+
+    padding: 10px 16px;
+    background-color: $main-blue;
+  }
+
+  &__list-submenu > li{
+    margin-bottom: 7px;
+  }
+
+  &__list-submenu > li:last-child{
+    margin-bottom: 0;
+  }
+
+  &__list-submenu > hr{
+    margin: 0 0 7px 0;
+    border: none;
+    width: 119px;
+    height: 2px;
+    background-color: $white;
+  }
+
+  &__list-submenu.active{
+    display: block;
   }
 }

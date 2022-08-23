@@ -32,9 +32,7 @@ h1, h2, h3, h4, h5, h6, p{
 }
 
 a{
-  color: inherit;
   text-decoration: none;
-  font: inherit;
   &:focus{
     outline: none;
   }
@@ -45,13 +43,15 @@ a{
   }
 }
 
+button[type=button]{
+	appearance: none;
+}
+
 button{
-	font: inherit;
-	color: inherit;
+	background: none;
 	padding: 0;
 	border: none;
 	cursor: pointer;
-	background: none;
 	outline: none;
 	&:focus{
 		outline: none;
@@ -59,16 +59,23 @@ button{
 }
 
 input, select, textarea{
-	color: inherit;
-	font: inherit;
 	outline: none;
 	&:focus{
 		outline: none;
 	}
-  &::placeholder{
-    font: inherit;
-    color: inherit;
-  }
+}
+
+input[type=search]{
+	appearance: none;
+	border: none;
+
+	@include font('Montserrat-Regular', 19px, 400, $black);
+	background-color: rgba(255, 255, 255, 0.38);
+	border-radius: 25px;
+
+	&::placeholder{
+		@include font('Montserrat-Regular', 19px, 400, rgba(0, 0, 0, .62));
+	}
 }
 
 ul{
@@ -78,16 +85,11 @@ ul{
 }
 
 .container{
-	width: 100%;
-	max-width: 1430px;
+	width: 68.125%; // 1308px from 1920px
+	max-width: 1310px;
   padding: 0 15px;
 	margin: 0 auto;
 }
 
-.check{
-	color: #ff0036;
-	font-weight: 700;
-	display: grid;
-}
 
 @import 'header.scss';
